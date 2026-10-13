@@ -1,0 +1,31 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "bcrypt",
+    "fastapi",
+    "pillow",
+    "pillow-heif>=1.8.0",
+    "pydantic-settings",
+    "pydantic[email]",
+    "pyjwt",
+    "python-multipart",
+    "rembg[cpu]>=2.0.85",
+    "sqlalchemy",
+    "uvicorn[standard]",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
